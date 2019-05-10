@@ -11,7 +11,7 @@ def gather_data_from_csv(path_of_file):
     for counter_1 in range(len(rows)):
         columns[counter_1]=rows[counter_1].split(",")
     done=False
-    while(!done):
+    while( not done):
         for counter_2 in range(len(len(rows))):
             for counter_3 in range(len(len(colums(counter_2)))):
                 all_elements[number_of_elements]=columns[counter_2][counter_3]
@@ -19,3 +19,5 @@ def gather_data_from_csv(path_of_file):
         done=True
 
     return all_elements, columns, rows
+
+def gather_data_from_Excel_file(path_of_file):
