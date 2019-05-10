@@ -14,9 +14,9 @@ This file should be made to have functions that can be used to store data in acc
 
 * Downloaded Data
 
-    * This directory should have raw data that is downloaded. Citations for this data should be included in this file.
+    * This directory should have raw data that is downloaded. Citations for this data should eventually be included in this file.
 
 * Saved_Data
     * This directory can include NumPy arrays and other forms of data that can be directly used in a Python program.
 
-## Citations for Downloaded Data in the Future "Downloaded_Data" directory.
+## Future Citations for Future Downloaded Data in the Future "Downloaded_Data" Directory:
