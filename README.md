@@ -30,6 +30,9 @@ UNESCO Institute for Statistics. *Government expenditure on education, total (% 
 
 
 
-## Links to Other Resources
+Please note that the following section is not necessarily comprehensive.
 
-1. http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.scatter.html#pandas.DataFrame.plot.scatter
+## Links to Multiple Websites
+
+1. http://pandas.pydata.org/pandas-docs/stable/reference/
+1. https://matplotlib.org/
