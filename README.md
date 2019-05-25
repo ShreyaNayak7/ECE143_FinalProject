@@ -21,8 +21,8 @@ Please note that both this "README" file and the corresponding repository may no
 * Saved_Data
     * This directory can include NumPy arrays and other forms of data that can be directly used in a Python program.
 
-Please note that the following sections may not be complete.
-## Citations for the Data that We Have Used or Would Use:
+Please note that the following section may not be complete yet.
+## Citations for the Data that We Either Have Used or Would Use:
 
 
 
