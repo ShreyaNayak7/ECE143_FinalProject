@@ -17,6 +17,8 @@ def scatter_plot(x,y, title):
 
     plt.scatter(x, y, s=y//1000, c=(y//100),alpha=0.2)
     provide_labels(x.name, y.name, title)
+    for i, txt in enumerate(x.index):
+        plt.annotate(txt, (x[i], y[i]))
     plt.show()
 
 def provide_labels(label_for_x_axis,label_for_y_axis,title):
