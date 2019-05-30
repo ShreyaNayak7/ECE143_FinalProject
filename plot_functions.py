@@ -41,4 +41,18 @@ def add_slider(series_0):
     :type data_frame_0: <class 'pandas.DataFrame'>
     :param data_frame_0: <class 'pandas.Series'>
     '''
-
+def get_year():
+    '''
+    This function is used to obtain a year from the user.
+    '''
+    while(True):
+        year=input("Please enter the year for the corresponding scatter plot. ")
+        if(year.isnumeric):
+            try:
+                numerical_year=int(year)
+                if(numerical_year<2020 and numerical_year>1900):
+                    return numerical_year
+                else:
+                    pass
+            except:
+                pass
