@@ -21,6 +21,7 @@ def scatter_plot(x,y,s,title):
     for i, txt in enumerate(x.index):
         plt.annotate(txt, (x[i], y[i]))
     plt.show()
+    add_slider()
 
 def provide_labels(label_for_x_axis,label_for_y_axis,title):
     '''
@@ -41,6 +42,3 @@ def add_slider(series_0):
     :param data_frame_0: <class 'pandas.Series'>
     '''
 
-    # ...
-
-    pass
