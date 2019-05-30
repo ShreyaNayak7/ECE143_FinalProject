@@ -1,5 +1,5 @@
 import pandas as pd
-def gather_data_from_csv(path_of_file,index='default',fillnan='no_fill'):
+def gather_data_from_csv(path_of_file,index='default',header=0,fillnan='no_fill'):
     '''
     This function is used to gather data from a file that has an extension of "csv".
     
@@ -9,14 +9,14 @@ def gather_data_from_csv(path_of_file,index='default',fillnan='no_fill'):
     :fillnan: integer,string; specifies the value that will replace nan in the dataframe
     '''
     assert isinstance(path_of_file,str)
-    df=pd.read_csv(path_of_file)
+    df=pd.read_csv(path_of_file,header=header)
     if index!='default':
         df=df.set_index(index)
     if fillnan!='no_fill':
         df=df.fillna(fillnan)
     return df
 
-def gather_data_from_Excel(path_of_file, sh_name,index='default',fillnan='no_fill'):
+def gather_data_from_Excel(path_of_file, sh_name,index='default',header=0,fillnan='no_fill'):
     ''''
     This function is used to gather data from an excel file into a dataframe
     
@@ -27,7 +27,7 @@ def gather_data_from_Excel(path_of_file, sh_name,index='default',fillnan='no_fil
     '''
     assert isinstance(path_of_file,str)
     assert isinstance(sh_name,str)
-    df=pd.read_excel(path_of_file, sheet_name=sh_name)
+    df=pd.read_excel(path_of_file, sheet_name=sh_name,header=header)
     if index!='default':
         df=df.set_index(index)
     if fillnan!='no_fill':
