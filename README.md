@@ -26,13 +26,13 @@ Please note that the following section may not be complete yet.
 
 
 
-UNESCO Institute for Statistics. *Government expenditure on education, total (% of GDP)*. Retreived from http://api.worldbank.org/v2/en/indicator/SE.XPD.TOTL.GD.ZS?downloadformat=excel
+UNESCO Institute for Statistics. *Government expenditure on education, total (% of GDP)*. Retreived from http://api.worldbank.org/v2/en/indicator/SE.XPD.TOTL.GD.ZS?downloadformat=excel.
 
 Correlation between life expectancy and expenditure on health.
 https://stats.oecd.org/Index.aspx?DataSetCode=SHA   >>> life expectancy
 https://stats.oecd.org/Index.aspx?DataSetCode=SHA  >>> expenditure on health
 
 
-
+UNESCO Institute of Statistics. *Education [Filters: Youth literacy rate, population 15-24 years, both sexes (%); all countries; all years]*. Retreived from http://data.uis.unesco.org/Index.aspx?DataSetCode=EDULIT_DS&popupcustomise=true&lang=en#.
 
 
