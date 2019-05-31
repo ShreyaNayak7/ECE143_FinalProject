@@ -46,8 +46,8 @@ def get_year():
     This function is used to obtain a year from the user.
     '''
     while(True):
-        year=input("Please enter the year for the corresponding scatter plot. ")
-        if(year.isnumeric):
+        year=input("Please enter the year for the corresponding scatter plot. If you do not want to enter a year, please enter \"Done\". ")
+        if(year.isnumeric()):
             try:
                 numerical_year=int(year)
                 if(numerical_year<2020 and numerical_year>1900):
@@ -56,3 +56,5 @@ def get_year():
                     pass
             except:
                 pass
+        elif(year=='done'):
+            return "done"
