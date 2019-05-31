@@ -16,17 +16,6 @@ hl=hl_raw[(hl_raw.Financing_scheme == "All financing schemes") &
        (hl_raw.Function == "Current expenditure on health (all functions)") &
        (hl_raw.Provider == "All providers") &
        (hl_raw.Measure == "Share of gross domestic product")]
-del hl['HF']
-del hl['HC']
-del hl['HP']
-del hl['MEASURE']
-del hl['TIME']
-del hl['Unit_Code']
-del hl['PowerCode_Code']
-del hl['Reference_Period']
-del hl['Reference_Period_Code']
-del hl['Flag_Codes']
-del hl['Flags']
 #format into "country in rows and cols in years" format
 hl_piv=pd.pivot_table(hl,index='Country',columns='Year',values='Value')
 
@@ -35,10 +24,5 @@ hl_piv=pd.pivot_table(hl,index='Country',columns='Year',values='Value')
 lf_raw=gd.gather_data_from_csv("HEALTH_STAT_30052019043359352.csv")
 lf_raw.columns = [c.replace(' ', '_') for c in lf_raw.columns]
 lf=lf_raw[(lf_raw.Variable=="Total population at birth")]
-del lf['VAR']
-del lf['UNIT']
-del lf['YEA']
-del lf['Flag_Codes']
-del lf['Flags']
 #format into "country in rows and cols in years" format
 lf_piv=pd.pivot_table(lf,index='Country',columns='Year',values='Value')
