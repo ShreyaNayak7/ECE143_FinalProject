@@ -5,6 +5,11 @@
 
 
 def draw_heatmap_linear(acc, acc_desc, depth_list):
+    '''this function will draw a linear heatmap, acc : list, acc_desc: string, depth_list:list of rows'''
+    assert isinstance(acc_desc,str)
+   
+    assert isinstance(acc,list)
+    assert isinstance(depth_list,list)
     import scipy.io as sio
     import matplotlib.pyplot as plt
     import numpy as np
@@ -28,6 +33,11 @@ def draw_heatmap_linear(acc, acc_desc, depth_list):
 
 
 def draw_heatmap_RBF(acc, acc_desc, gamma_list, C_list):
+    '''this function will draw a 2D heatmap, acc : list, acc_desc: string, depth_list:list of rows'''
+    assert isinstance(acc_desc,str)
+    assert isinstance(C_list,list)
+    assert isinstance(acc,list)
+    assert isinstance(gamma_list,list)
     import seaborn as sns
     from sklearn import svm
     from sklearn.model_selection import GridSearchCV
