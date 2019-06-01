@@ -11,8 +11,9 @@ import plot_functions as pf
 #beginning_of_file=""
 beginning_of_path="../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/"
 #file_1="SHA_30052019014114312.csv"
-file_2="HEALTH_STAT_30052019043359352.csv"
-#
+file_1="SHA_01062019033826092.csv"
+# file_2="HEALTH_STAT_30052019043359352.csv"
+file_2="HEALTH_STAT_01062019034825710.csv"
 #load file on health expenditure
 #https://stats.oecd.org/Index.aspx?DataSetCode=SHA
 hl_raw=gd.gather_data_from_csv(str(beginning_of_path+file_1))
@@ -35,13 +36,13 @@ lf_piv=pd.pivot_table(lf_c,index='Country',columns='Year',values='Value')
 
 #plot
 while(True):
-    input_year=pf.get_year()
-    if(input_year=='done'):
+    year=pf.get_year()
+    if(year=='done'):
         exit()
     try:
         inx=lf_piv.index & hl_piv.index
         lf=lf_piv.loc[inx]
         hl=hl_piv.loc[inx]
-        pf.scatter_plot(hl[year],lf[year],"health expenditure vs life expectancy")
+        pf.scatter_plot(hl[year],lf[year],10000000,"health expenditure vs life expectancy")
     except:
-        assert False
+        pass
