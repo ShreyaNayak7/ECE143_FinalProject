@@ -5,8 +5,9 @@ Making Plots by Using the "matplotlib.pyplot" Module
 
 
 import matplotlib.pyplot as plt
+import panadas as pd
 
-def scatter_plot(x,y,color,title):
+def scatter_plot(x,y,color,title, units_for_x="", units_for_y=""):
     '''
     
     :param x: data along x axis
@@ -15,9 +16,12 @@ def scatter_plot(x,y,color,title):
     :type y: <class 'pandas.Series'>
     :type s: <class 'pandas.Series'>
     '''
-
+    assert isinstance(x,pd.Series)
+    assert isinstance(y,pd.Series)
+    assert isinstance(color, pd.Series)
+    assert isinstance(title, str)
     plt.scatter(x, y,c=color,alpha=0.8)
-    provide_labels(x.name, y.name, title)
+    provide_labels(x.name+", "+units_for_x, y.name+", "+units_for_y, title)
     for i, txt in enumerate(x.index):
         plt.annotate(txt, (x[i], y[i]))
     plt.show()
@@ -30,6 +34,9 @@ def provide_labels(label_for_x_axis,label_for_y_axis,title):
     :type x: pandas.Series
     :type y: pandas.Series
     '''
+    assert isinstance(label_for_x_axis, str)
+    assert isinstance(label_for_y_axis,str)
+    assert isinstance(title, str)
     plt.xlabel(label_for_x_axis)
     plt.ylabel(label_for_y_axis)
     plt.title(title)
