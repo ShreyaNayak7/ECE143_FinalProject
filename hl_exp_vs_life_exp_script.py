@@ -3,7 +3,7 @@
 Created on Wed May 29 16:03:35 2019
 
 @author: shrey
-Editor: Akhil Jain
+Editor: Akhil Jain;Jiaye Wang
 """
 import pandas as pd
 import gather_data as gd
