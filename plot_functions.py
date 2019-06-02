@@ -6,7 +6,7 @@ Making Plots by Using the "matplotlib.pyplot" Module
 
 import matplotlib.pyplot as plt
 
-def scatter_plot(x,y,s,title):
+def scatter_plot(x,y,color,title):
     '''
     
     :param x: data along x axis
@@ -16,7 +16,7 @@ def scatter_plot(x,y,s,title):
     :type s: <class 'pandas.Series'>
     '''
 
-    plt.scatter(x, y, s=s//100000, c=(y//100),alpha=0.2)
+    plt.scatter(x, y,c=color,alpha=0.8)
     provide_labels(x.name, y.name, title)
     for i, txt in enumerate(x.index):
         plt.annotate(txt, (x[i], y[i]))
