@@ -7,6 +7,7 @@ Created on Wed May 29 16:03:35 2019
 import pandas as pd
 import gather_data as gd
 import plot_functions as pf
+import continent_country_map as cmap
 
 #load file on health expenditure
 #https://stats.oecd.org/Index.aspx?DataSetCode=SHA
@@ -28,12 +29,7 @@ lf_c=lf_raw[(lf_raw.Variable=="Total population at birth")]
 #format into "country in rows and cols in years" format
 lf_piv=pd.pivot_table(lf_c,index='COU',columns='Year',values='Value')
 
-#colour file, remove duplicate turkey
-#https://datahub.io/JohnSnowLabs/country-and-continent-codes-list
-cont_raw=gd.gather_data_from_csv("country-and-continent-codes-list.csv",
-                             index='Three_Letter_Country_Code')
-cont_raw = cont_raw.loc[~cont_raw.index.duplicated(keep='last')]
-
+cont_raw=cmap.cont_cou_map()
 
 #plot
 year=2015
