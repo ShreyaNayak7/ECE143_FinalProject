@@ -28,7 +28,8 @@ y2=df1.index.get_loc(year2)
 col=df1.columns.get_loc(country)
 
 hover = HoverTool(
-                  tooltips=[('Year',"$x{0f}"),
+                  tooltips=[('Country',country),
+                            ('Year',"$x{0f}"),
                             ('Value',"$y%")],
                   mode='vline'
                   )
