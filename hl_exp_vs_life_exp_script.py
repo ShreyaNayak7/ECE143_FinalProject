@@ -35,14 +35,8 @@ lf_c=lf_raw[(lf_raw.Variable=="Total population at birth")]
 lf_piv=pd.pivot_table(lf_c,index='Country',columns='Year',values='Value')
 
 #plot
-while(True):
-    year=pf.get_year()
-    if(year=='done'):
-        exit()
-    try:
-        inx=lf_piv.index & hl_piv.index
-        lf=lf_piv.loc[inx]
-        hl=hl_piv.loc[inx]
-        pf.scatter_plot(hl[year],lf[year],10000000,"health expenditure vs life expectancy")
-    except:
-        pass
+year=2015
+inx=lf_piv.index & hl_piv.index
+lf=lf_piv.loc[inx]
+hl=hl_piv.loc[inx]
+pf.scatter_plot(hl[year],lf[year],"health expenditure vs life expectancy")
