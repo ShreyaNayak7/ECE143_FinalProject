@@ -5,7 +5,7 @@ Making Plots by Using the "matplotlib.pyplot" Module
 
 
 import matplotlib.pyplot as plt
-import panadas as pd
+import pandas as pd
 
 def scatter_plot(x,y,color,title, units_for_x="", units_for_y=""):
     '''
@@ -21,7 +21,8 @@ def scatter_plot(x,y,color,title, units_for_x="", units_for_y=""):
     assert isinstance(color, pd.Series)
     assert isinstance(title, str)
     plt.scatter(x, y,c=color,alpha=0.8)
-    provide_labels(x.name+", "+units_for_x, y.name+", "+units_for_y, title)
+    list_of_labels=title.split(" Versus ")
+    provide_labels(list_of_labels[1]+", "+units_for_x, list_of_labels[0]+", "+units_for_y, title)
     for i, txt in enumerate(x.index):
         plt.annotate(txt, (x[i], y[i]))
     plt.show()
