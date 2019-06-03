@@ -40,6 +40,6 @@ cont=cont_raw.loc[inx]
 color_map={'Asia':'blue','Europe':'crimson','North America':'darkgreen',
    'South America':'yellow','Oceania':'blueviolet'}
 cont["Color"] = cont["Continent_Name"].apply(lambda x: color_map.get(x))
-pf.scatter_plot(hl[year],lf[year],cont['Color'],"health expenditure vs life expectancy")
+pf.scatter_plot(hl[year],lf[year],cont['Color'],"Life Expectancy Versus Health Expenditure", "Percentage of Gross Domestic Product", "Years") # Please finish this part.
 
 
