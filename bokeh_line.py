@@ -27,7 +27,7 @@ df.drop(list(range(1800,1880)),inplace=True)
 df.drop(df.iloc[:, -2::], inplace = True, axis = 1)
 df1=df[['Argentina','Australia','Germany','India','Italy','Japan','United States',
         'United Kingdom']].copy()
-#######################
+######################
 #########dropdown menu###########
 #from bokeh.io import output_file, show
 #from bokeh.models.widgets import Dropdown
