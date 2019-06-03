@@ -14,7 +14,6 @@ import continent_country_map as cmap
 #https://stats.oecd.org/Index.aspx?DataSetCode=SHA
 # beginning_of_path=""
 beginning_of_path="../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/"
-
 #file_1="SHA_30052019014114312.csv"
 file_1="SHA_01062019033826092.csv"
 # file_2="HEALTH_STAT_30052019043359352.csv"
@@ -48,6 +47,6 @@ cont=cont_raw.loc[inx]
 color_map={'Asia':'blue','Europe':'crimson','North America':'darkgreen',
    'South America':'yellow','Oceania':'blueviolet'}
 cont["Color"] = cont["Continent_Name"].apply(lambda x: color_map.get(x))
-pf.scatter_plot(hl[year],lf[year],cont['Color'],"Life Expectancy Versus Health Expenditure", "Percentage of Gross Domestic Product", "Years")
+pf.scatter_plot(hl[year],lf[year],cont['Color'],"Life Expectancy Versus Health Expenditure", "Percentage of Gross Domestic Product", "Years") # Please finish this part.
 
 
