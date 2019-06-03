@@ -15,7 +15,8 @@ import continent_country_map as cmap
 ed_raw=gd.gather_data_from_Excel("../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/API_SE.XPD.TOTL.GD.ZS_DS2_en_excel_v2_10576899.xls",sh_name="Data",header=3,index="Country Code")
 ed_piv=ed_raw
 gather_data_from_Excel(
-lit_raw=gd.gather_data_from_csv("../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/EDULIT_DS_29052019224353928.csv")
+lit_raw=gd.gather_data_from_csv("../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/API_SE.XPD.TOTL.GD.ZS_DS2_en_excel_v2_10576899.xls")
+print(lit_raw)
 # lit_raw=gd.gather_data_from_csv("EDULIT_DS_31052019025144633.csv")
 lit_raw.columns = [c.replace(' ', '_') for c in lit_raw.columns]
 lit_c=lit_raw[(lit_raw.Indicator == "Youth literacy rate, population 15-24 years, both sexes (%)")]
