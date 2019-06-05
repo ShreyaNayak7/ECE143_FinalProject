@@ -5,7 +5,11 @@
 
 
 def draw_heatmap_linear(acc, acc_desc, depth_list):
-    '''this function will draw a linear heatmap, acc : list, acc_desc: string, depth_list:list of rows'''
+    '''this function will draw a linear heatmap, acc : list, acc_desc: string, depth_list:list of rows
+    Here is the sample input.
+    #acc = grid.cv_results_['mean_train_score'].reshape(5,1)
+    #draw_heatmap_linear(acc, 'accuracy', D_list)
+    '''
     assert isinstance(acc_desc,str)
    
     assert isinstance(acc,list)
@@ -33,7 +37,11 @@ def draw_heatmap_linear(acc, acc_desc, depth_list):
 
 
 def draw_heatmap_RBF(acc, acc_desc, gamma_list, C_list):
-    '''this function will draw a 2D heatmap, acc : list, acc_desc: string, depth_list:list of rows'''
+    '''this function will draw a 2D heatmap, acc : list, acc_desc: string, depth_list:list of rows
+    here is the sample input.
+    #acc = grid.cv_results_['meanscore'].reshape(4,4)
+    #draw_heatmap_RBF(acc, ' accuracy', gamma_list, C_list)
+    '''
     assert isinstance(acc_desc,str)
     assert isinstance(C_list,list)
     assert isinstance(acc,list)
@@ -61,8 +69,7 @@ def draw_heatmap_RBF(acc, acc_desc, gamma_list, C_list):
     plt.title(acc_desc + ' w.r.t $C$ and $\gamma$')
     sns.set_style("whitegrid", {'axes.grid' : False})
     plt.show()
-#train_acc = grid.cv_results_['mean_train_score'].reshape(4,4)
-#draw_heatmap_RBF(train_acc, 'train accuracy', gamma_list, C_list)    
+    
 
 
 # In[ ]:
