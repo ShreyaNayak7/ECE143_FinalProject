@@ -20,7 +20,7 @@ soc_c=soc_raw[(soc_raw.Source == "Public") &
               (soc_raw.Measure == "In percentage of Total General Government Expenditure")]
 soc_piv=pd.pivot_table(soc_c,index='Country',columns='Year',values='Value')
 
-soc_col=soc_piv[2015].copy()
+soc_col=soc_piv[2010].copy()
 soc_col.dropna(inplace=True)
 soc_col_ed=soc_col.drop(['Iceland','Slovak Republic','OECD - Total','Latvia','Estonia','Lithuania',
              'Slovenia','Finland','Sweden','Italy','Belgium','Austria','Czech Republic',
