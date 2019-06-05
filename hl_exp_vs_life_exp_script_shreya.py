@@ -3,7 +3,7 @@
 Created on Wed May 29 16:03:35 2019
 
 @author: shrey
-Editor: Akhil Jain
+Editor: Akhil Jain; Jiaye Wang
 """
 import pandas as pd
 import gather_data as gd
@@ -49,5 +49,15 @@ color_map={'Asia':'blue','Europe':'crimson','North America':'darkgreen',
    'South America':'yellow','Oceania':'blueviolet','Africa':'lawngreen'}
 cont["Color"] = cont["Continent_Name"].apply(lambda x: color_map.get(x))
 pf.scatter_plot(hl[year],lf[year],cont['Color'],"Life Expectancy Versus Health Expenditure", "Percentage of Gross Domestic Product", "Years",color_map)
-
-
+###################################
+#plot2
+#i=0
+#for marker in ['o', '.', ',', 'x', '+', 'v', '^', '<', '>', 's', 'd']:
+#    plt.plot(hl[year][i], lf[year][i], marker,
+#             label=lf[year].keys()[i])
+#    i=i+1
+#plt.xlabel('Health Expenditure, Percentage of Gross Domestic Product')
+#plt.ylabel('Life Expectancy,Years')
+#plt.legend(loc='upper right', fontsize=10)
+#plt.title('Life Expectancy Versus Health Expenditure"')
+#plt.show()
