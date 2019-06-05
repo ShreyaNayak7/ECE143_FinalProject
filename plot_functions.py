@@ -11,7 +11,7 @@ from matplotlib.pyplot import figure
 
 # import matplotlib
 
-def scatter_plot(x,y,color,title, units_for_x="", units_for_y="",legend={}):
+def scatter_plot(x,y,color,title, units_for_x="", units_for_y="",legend={},size_of_figure=None):
     '''
     
     :param x: data along x axis
@@ -25,14 +25,14 @@ def scatter_plot(x,y,color,title, units_for_x="", units_for_y="",legend={}):
     assert isinstance(color, pd.Series)
     assert isinstance(title, str)
     assert isinstance(legend,dict)
-   
+    plt.figure(figsize=size_of_figure)
     plt.scatter(x, y,c=color,alpha=0.8)
     list_of_labels=title.split(" Versus ")
     provide_labels(list_of_labels[1]+", "+units_for_x, list_of_labels[0]+", "+units_for_y, title)
     for i, txt in enumerate(x.index):
         plt.annotate(txt, (x[i], y[i]))
     plt.gca().spines['top'].set_visible(False)
-    plt.gca().spines['top'].set_visible(False)
+    plt.gca().spines['right'].set_visible(False)
     plt.grid(True,which='both',color='0.9')
     patches=[]
     for counter_1 in range(len(legend)):
