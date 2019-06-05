@@ -25,20 +25,24 @@ def scatter_plot(x,y,color,title, units_for_x="", units_for_y="",legend={}):
     assert isinstance(color, pd.Series)
     assert isinstance(title, str)
     assert isinstance(legend,dict)
-   
-    plt.scatter(x, y,c=color,alpha=0.8)
+    fig1 = plt.figure(figsize=(8,6))
+    ax = plt.subplot(111)
+    plt.scatter(x, y,c=color,alpha=0.8,zorder=3)
     list_of_labels=title.split(" Versus ")
     provide_labels(list_of_labels[1]+", "+units_for_x, list_of_labels[0]+", "+units_for_y, title)
     for i, txt in enumerate(x.index):
         plt.annotate(txt, (x[i], y[i]))
     plt.gca().spines['top'].set_visible(False)
-    plt.gca().spines['top'].set_visible(False)
-    plt.grid(True,which='both',color='0.9')
+    plt.gca().spines['right'].set_visible(False)
+    plt.grid(True,which='both',color='0.9',zorder=0)
     patches=[]
     for counter_1 in range(len(legend)):
         patches.append(mpatches.Patch(color=list(legend.values())[counter_1],label=list(legend.keys())[counter_1]))
-    plt.legend(handles=list(patches),loc='best')
-    plt.show()
+    
+  
+    
+    ax.legend(handles=list(patches),bbox_to_anchor=(1.1, 1.02))
+    fig1.show()
 def provide_labels(label_for_x_axis,label_for_y_axis,title):
     '''
     
