@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 ax = figure(figsize=(10, 6)).gca()
 
-soc_raw=gd.gather_data_from_csv("Social Expenditure.csv")
+# soc_raw=gd.gather_data_from_csv("Social Expenditure.csv")
+soc_raw=gd.gather_data_from_csv("../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/SOCX_ACG_04062019103440530.csv")
 #clean file: replace space in col names with _, filter, delete unnecessary cols
 soc_raw.columns = [c.replace(' ', '_') for c in soc_raw.columns]
 soc_c=soc_raw[(soc_raw.Source == "Public") &

@@ -36,10 +36,20 @@ https://stats.oecd.org/Index.aspx?DataSetCode=SHA  >>> expenditure on health
 UNESCO Institute of Statistics. *Education [Filters: Youth literacy rate, population 15-24 years, both sexes (%); all countries; all years]*. Retreived from http://data.uis.unesco.org/Index.aspx?DataSetCode=EDULIT_DS&popupcustomise=true&lang=en#.
 
 
-Organization for Economic Co-operation and Development. *Health expenditure and financing* and *Life expectancy*. Retreived from https://stats.oecd.org/Index.aspx?DataSetCode=SHA.
-* Download CSV files
+UNESCO Institute of Statistics. *Education [Filters: Adult literacy rate, population 15+ years, both sexes (%); all countries; all years]*. Retreived from http://data.uis.unesco.org/Index.aspx?DataSetCode=EDULIT_DS&popupcustomise=true&lang=en#.
 
-    
+* Downloaded CSV files
+
+Organization for Economic Co-operation and Development. *Health expenditure and financing* and *Life expectancy*. Retreived from https://stats.oecd.org/Index.aspx?DataSetCode=SHA.
+
+* Downloaded CSV files
+
+
+Organization for Economic Co-operation and Development. *Social Expenditure - Aggregated Data*. Retreived from https://stats.oecd.org/Index.aspx?datasetcode=SOCX_AGG.
+* Downloaded CSV file
+
+OECD (2019), Poverty rate (indicator). doi: 10.1787/0fe1315d-en (Accessed on 04 June 2019)
+* Retrieved from https://data.oecd.org/inequality/poverty-rate.htm
 
 ## Third-Party Modules
 
