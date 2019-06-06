@@ -51,6 +51,8 @@ Organization for Economic Co-operation and Development. *Social Expenditure - Ag
 OECD (2019), Poverty rate (indicator). doi: 10.1787/0fe1315d-en (Accessed on 04 June 2019)
 * Retrieved from https://data.oecd.org/inequality/poverty-rate.htm
 
+Two files for the data for the "Happiness Rank Versus GDP Per Capita" plot 
+
 ## Third-Party Modules
 
 1. Matplotlib
