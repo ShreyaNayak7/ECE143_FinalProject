@@ -41,7 +41,8 @@ def scatter_plot(x,y,color,title, units_for_x="", units_for_y="",legend={}):
     
   
     
-    ax.legend(handles=list(patches),bbox_to_anchor=(1.1, 1.02))
+    #ax.legend(handles=list(patches),bbox_to_anchor=(1.1, 1.02))
+    ax.legend(handles=list(patches),loc='bottom right')
     fig1.show()
 def provide_labels(label_for_x_axis,label_for_y_axis,title):
     '''
