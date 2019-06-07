@@ -54,7 +54,8 @@ class Utilities:
         df2_trim=df2.loc[inx]
         df3_trim=df3.loc[inx]
         return df1_trim,df2_trim,df3_trim
-         
+    
+    @staticmethod
     def return_modified_data_frame(data_frame,list_of_tuples):
         '''
         This function is used to return a Pandas DataFrame that includes just four specified columns.
