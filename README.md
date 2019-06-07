@@ -2,6 +2,12 @@ Please note that both this "README" file and the corresponding repository may no
 
 # README
 
+## Members of Team 7
+
+Akhil Jain
+Shreya Nayak
+Jiaye Wang
+
 ## Descriptions of The Python Code in this Repository:
 
 1. [**continent_country_aap.py**](continent_country_map.py)
