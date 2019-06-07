@@ -65,4 +65,5 @@ The World Bank. *GDP per capita (current US$)*. https://data.worldbank.org/indic
 ## Third-Party Modules
 
 1. Matplotlib
-1. 
+1. Bokeh
+1. Folium
