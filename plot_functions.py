@@ -24,7 +24,7 @@ def scatter_plot(x,y,color,title, units_for_x="", units_for_y="",legend={},size_
     assert isinstance(x,pd.Series)
     assert isinstance(y,pd.Series)
     assert isinstance(color, pd.Series)
-    assert isinstance(title, str)
+    assert
     assert isinstance(legend,dict)
     plt.figure(figsize=size_of_figure)
     plt.scatter(x, y,c=color,alpha=0.8)

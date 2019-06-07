@@ -37,3 +37,19 @@ class DataHandler:
         if fillnan!='no_fill':
             df=df.fillna(fillnan)
         return df
+    @staticmethod
+    def cont_cou_map(file_path):
+        '''
+        gives dataframe that has continent name against country label
+        Inputs: file path
+                (str)
+                Gives path where file is located
+        '''
+        assert isinstance(file_path,str)
+        #colour file, remove duplicate turkey
+        #https://datahub.io/JohnSnowLabs/country-and-continent-codes-list
+        cont_raw=pd.read_csv(file_path)
+        cont_raw.set_index('Three_Letter_Country_Code',inplace=True)                              
+        cont_raw = cont_raw.loc[~cont_raw.index.duplicated(keep='last')]
+        return cont_raw
+
