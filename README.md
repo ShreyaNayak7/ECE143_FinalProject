@@ -4,13 +4,17 @@ Please note that both this "README" file and the corresponding repository may no
 
 ## Descriptions of The Python Code in this Repository:
 
-1. **plots_for_Government_Expenditure_on_Education.py**
+1. [**continent_country_aap.py**](continent_country_map.py)
 
-**plots_for_Government_Expenditure_on_Education.py** should eventually have a lot of functions for plotting the data in Reference 1 that is related to Government Expenditure on Education.
+[**continent_country_aap.py**](continent_country_map.py) is a Python script that contains a function for creating a ...
 
-2. **gather_data.py**
+2. [**gather_data.py**](./gather_data.py)
 
 **gather_data.py** should be made to have functions that can be used to store data in accessible formats for plotting purposes.
+
+3. [**plot_functions.py**](./plot_functions.py)
+
+[**plot_functions.py**](./plot_functions.py) is used to plot all of the scatter plots.
 
 ## Current and/or Recommended Direcories:
 
@@ -27,11 +31,6 @@ Please note that the following section may not be complete yet.
 
 
 UNESCO Institute for Statistics. *Government expenditure on education, total (% of GDP)*. Retreived from http://api.worldbank.org/v2/en/indicator/SE.XPD.TOTL.GD.ZS?downloadformat=excel.
-
-Correlation between life expectancy and expenditure on health.
-https://stats.oecd.org/Index.aspx?DataSetCode=SHA   >>> life expectancy
-https://stats.oecd.org/Index.aspx?DataSetCode=SHA  >>> expenditure on health
-
 
 UNESCO Institute of Statistics. *Education [Filters: Youth literacy rate, population 15-24 years, both sexes (%); all countries; all years]*. Retreived from http://data.uis.unesco.org/Index.aspx?DataSetCode=EDULIT_DS&popupcustomise=true&lang=en#.
 
@@ -51,7 +50,11 @@ Organization for Economic Co-operation and Development. *Social Expenditure - Ag
 OECD (2019), Poverty rate (indicator). doi: 10.1787/0fe1315d-en (Accessed on 04 June 2019)
 * Retrieved from https://data.oecd.org/inequality/poverty-rate.htm
 
-Two files for the data for the "Happiness Rank Versus GDP Per Capita" plot 
+JohnSnowLabs. *Country and Continent Codes List*. Retreived from a link on https://datahub.io/JohnSnowLabs/country-and-continent-codes-list#data. Link for the actual data: https://pkgstore.datahub.io/JohnSnowLabs/country-and-continent-codes-list/country-and-continent-codes-list-csv_csv/data/b7876b7f496677669644f3d1069d3121/country-and-continent-codes-list-csv_csv.csv.
+
+World Happiness Reports. https://www.kaggle.com/unsdsn/world-happiness or https://www.kaggle.com/unsdsn/world-happiness#2017.csv.
+
+The World Bank. *GDP per capita (current US$)*. https://data.worldbank.org/indicator/ny.gdp.pcap.cd.
 
 ## Third-Party Modules
 
