@@ -1,6 +1,6 @@
 import os
-from gather_data import DataHandler as dh
-from plot_functions import Choropleth as choro
+from class_gather_data import DataHandler as dh
+from class_plot_functions import Choropleth as choro
 
 #load json file that contains the map
 world_geo = os.path.join(r'C:\Users\shrey\A_Repository_for_the_Final_Project_for_ECE_143', 'countries.geo.json')
