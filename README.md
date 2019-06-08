@@ -1,5 +1,7 @@
 Please note that both this "README" file and the corresponding repository may not be complete until the deadline for our final project for the "ECE 143" course of Spring 2019.
 
+![Modified Title Slide](./Images/image_1.png)
+
 # README
 
 ## Members of Team 7
@@ -9,6 +11,19 @@ Akhil Jain (@ECEAkhil)
 Shreya Nayak (@ShreyaNayak7)
 
 Jiaye Wang (@AndyWang121)
+
+## Topic: Analysis of Government Expenditure
+
+We wanted to learn about the following:
+* general trends of government expenditure
+* correlation between life expectancy and health expenditure
+* correlation between literacy rate and education expenditure
+* correlation between poverty rate and social expenditure
+* correlation between standard of living and happiness rank
+
+## Methodology
+
+![Modified Title Slide](./Images/Image_for_Methodology.png)
 
 ## Descriptions of The Python Code in this Repository:
 
@@ -28,16 +43,8 @@ For the final presentation, [**plot_functions.py**](./plot_functions.py) was use
 
 [**continent_country_aap.py**](continent_country_map.py) is a Python script that contains a function for creating a Pandas DataFrame for mapping each country to a continent.
 
-## Current and/or Recommended Direcories:
+*Please note that the following section may not be complete yet.*
 
-* Downloaded Data
-
-    * This directory should have raw data that is downloaded. Citations for this data should eventually be included in this file.
-
-* Saved_Data
-    * This directory can include NumPy arrays and other forms of data that can be directly used in a Python program.
-
-Please note that the following section may not be complete yet.
 ## Citations for the Data that We Either Have Used or Would Use:
 
 
@@ -74,6 +81,7 @@ The World Bank. *GDP per capita (current US$)*. https://data.worldbank.org/indic
 1. Matplotlib
 1. Bokeh
 1. Folium
+1. NumPy
 
 ## A Clarification
 
