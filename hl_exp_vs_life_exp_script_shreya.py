@@ -1,14 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 29 16:03:35 2019
-
-@author: shrey
-Editor: Akhil Jain; Jiaye Wang
-"""
 import pandas as pd
 from utilities import Utilities as ut
 from plot_func import ScatterPlot as sc
 from gather_data import DataHandler as dh
+#%matplotlib notebook
 
 #load file on health expenditure
 #https://stats.oecd.org/Index.aspx?DataSetCode=SHA

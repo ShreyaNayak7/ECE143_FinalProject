@@ -1,40 +1,30 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu May 30 17:52:25 2019
-
-@author: shrey
-"""
-
 import pandas as pd
-import gather_data as gd
-import plot_functions as pf
-import continent_country_map as cmap
-import matplotlib.pyplot as plt
+from utilities import Utilities as ut
+from plot_func import ScatterPlot as sc
+from gather_data import DataHandler as dh
 #%matplotlib notebook
-from matplotlib.pyplot import figure
 
-##load file on poverty
-##https://data.oecd.org/inequality/poverty-rate.html
-pv_raw=gd.gather_data_from_csv("Poverty.csv")
-#pv_raw=gd.gather_data_from_csv("../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/DP_LIVE_04062019115820354.csv")
-##clean file: replace space in col names with _, filter, delete unnecessary cols
-pv_raw.columns = [c.replace(' ', '_') for c in pv_raw.columns]
+#load file on poverty
+#https://data.oecd.org/inequality/poverty-rate.html
+file_1="D:\ECE 143\Data files for Project\Poverty.csv"
+
+pv_raw=dh.gather_data_from_csv(file_1)
+pv_raw=ut.remove_spaces(pv_raw)
 pv_c=pv_raw[(pv_raw.SUBJECT == "TOT")]
-#pv_piv=pv_c
-pv_piv=pd.pivot_table(pv_c,index='LOCATION',columns='TIME',values='Value')
+pv_piv=ut.pivot(pv_c,index_new='LOCATION',columns_new='TIME',values_new='Value')
 
 #load file on social expenditure
 #https://data.oecd.org/inequality/poverty-rate.html
-soc_raw=gd.gather_data_from_csv("Social Expenditure.csv")
-#soc_raw=gd.gather_data_from_csv("../../Downloads/Downloaded_Data_for_the_Final_Project_for_ECE_143/SOCX_AGG_04062019103440530.csv")
-#clean file: replace space in col names with _, filter, delete unnecessary cols
-soc_raw.columns = [c.replace(' ', '_') for c in soc_raw.columns]
+file_2="D:\ECE 143\Data files for Project\Social Expenditure.csv"
+soc_raw=dh.gather_data_from_csv(file_2)
+soc_raw=ut.remove_spaces(soc_raw)
 soc_c=soc_raw[(soc_raw.Source == "Public") &
               (soc_raw.Branch == "Total") &
               (soc_raw.Type_of_Expenditure == "Total") &
               (soc_raw.Measure == "In percentage of Gross Domestic Product")]
-#format into "country in rows and cols in years" format
-soc_piv=pd.pivot_table(soc_c,index='COUNTRY',columns='Year',values='Value')
+soc_piv=ut.pivot(soc_c,index_new='COUNTRY',columns_new='Year',values_new='Value')
+
+cont_raw=dh.cont_cou_map("D:\ECE 143\Data files for Project\country-and-continent-codes-list.csv")
 
 #plot
 year=2015
@@ -43,10 +33,6 @@ soc=soc_piv[year].dropna()
 inx=soc.index & pv.index
 pv=pv.loc[inx]
 soc=soc.loc[inx]
-color_map={'Asia':'blue','Europe':'crimson','North America':'darkgreen',
-   'South America':'yellow','Oceania':'blueviolet','Africa':'lawngreen'}
-cont_raw=cmap.cont_cou_map()
-inx=soc_piv.index & pv_piv.index & cont_raw.index
-cont=cont_raw.loc[inx]
-cont["Color"] = cont["Continent_Name"].apply(lambda x: color_map.get(x))
-pf.scatter_plot(soc,pv,cont['Color'],"Poverty Rate Versus Social Expenditure", "Percentage of GDP", "ratio",color_map)
+soc,pv,cont=ut.trim(soc,pv,cont_raw)
+sc_plot=sc(soc,pv,cont,"Poverty Rate Versus Social Expenditure", "Social Expenditure (Percentage of GDP)", "Pverty Rate (ratio)")
+sc_plot.show()
