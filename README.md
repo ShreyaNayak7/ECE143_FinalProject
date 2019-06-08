@@ -1,6 +1,5 @@
-Please note that both this "README" file and the corresponding repository may not be complete until the deadline for our final project for the "ECE 143" course of Spring 2019.
 
-![Modified Title Slide](./Images/image_1.png)
+![Modified Title Slide](./Images/Image_1.png)
 
 # README
 
@@ -58,13 +57,13 @@ Python 3.7.3
 
 ## Descriptions of The Python Code in this Repository:
 
-1. [**class_gather_data.py**](./Code/gather_data.py)
+1. [**class_gather_data.py**](./Code/class_gather_data.py)
 
-**gather_data.py** should be made to have functions that can be used to store data in accessible formats for plotting purposes.
+[**class_gather_data.py**](./Code/class_gather_data.py) should be made to have functions that can be used to store data in accessible formats for plotting purposes.
 
 2. [**class_plot_functions.py**](./Code/class_plot_functions.py)
 
-For the final presentation, a file called "**plot_functions.py**" was used to plot all of the scatter plots. [**class_plot_functions.py**](./plot_func.py) is an object-oriented version of that **plot_functions.py** file.
+For the final presentation, a file called "**plot_functions.py**" was used to plot all of the scatter plots. [**class_plot_functions.py**](./plot_functions.py) is an object-oriented version of that **plot_functions.py** file.
 
 3. [**class_utilities.py**](./Code/class_utilities.py)
 
