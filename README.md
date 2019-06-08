@@ -21,27 +21,56 @@ We wanted to learn about the following:
 * correlation between poverty rate and social expenditure
 * correlation between standard of living and happiness rank
 
+## File Structure
+
+Root
+```
+|
++----Code
+|       | class_gather_data.py
+|       | class_plot_functions.py
+|       | class utilities.py
+|       | ed_exp_vs_lit_rate_script.py
+|       | folium_cloropleth_govt_exp_script.py
+|       | gdp_pcapita_vs_hap_rank_script.py
+|       | gov_exp_vs_year_script.py
+|       | hl_exp_vs_life_exp_script.py
+|       | Last Notebook.ipynb
+|       | priority_bar_script.py
+|       | social_exp_versus_pov_script.py
++----Files_Related_to_the_Presentation
+|       | Analysis of Government Spending.pdf
+|       | Analysis of Government Spending.pptx
+|       | govt_exp_pcap.html
+|       | line.html
++----Images
+|       | Image_1.png
+|       | Image_for_Methodology.png
+README.md
+Analysis of Government Spending.pdf
+```
 ## Methodology
 
 ![Modified Title Slide](./Images/Image_for_Methodology.png)
 
+## Version of Python to Use
+Python 3.7.3
+
 ## Descriptions of The Python Code in this Repository:
 
-1. [**gather_data.py**](./gather_data.py)
+1. [**class_gather_data.py**](./Code/gather_data.py)
 
 **gather_data.py** should be made to have functions that can be used to store data in accessible formats for plotting purposes.
 
-2. [**plot_functions.py**](./plot_functions.py)
+2. [**class_plot_functions.py**](./Code/class_plot_functions.py)
 
-For the final presentation, [**plot_functions.py**](./plot_functions.py) was used to plot all of the scatter plots. [**plot_func.py**](./plot_func.py) is an object-oriented version of [**plot_functions.py**](./plot_functions.py).
+For the final presentation, a file called "**plot_functions.py**" was used to plot all of the scatter plots. [**class_plot_functions.py**](./plot_func.py) is an object-oriented version of that **plot_functions.py** file.
 
-3. [**utilities.py**](./utilities.py)
+3. [**class_utilities.py**](./Code/class_utilities.py)
 
 [**utilities.py**](./utilities.py) is used for processing data so that a desired Pandas DataFrame can be obtained.
 
-4. [**continent_country_aap.py**](continent_country_map.py)
-
-[**continent_country_aap.py**](continent_country_map.py) is a Python script that contains a function for creating a Pandas DataFrame for mapping each country to a continent.
+To see which scripts should be run for certain plots, please see the Jupyter Notebook.
 
 *Please note that the following section may not be complete yet.*
 
