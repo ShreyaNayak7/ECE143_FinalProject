@@ -1,7 +1,7 @@
 import pandas as pd
-from utilities import Utilities as ut
-from plot_functions import ScatterPlot as sc
-from gather_data import DataHandler as dh
+from class_utilities import Utilities as ut
+from class_plot_functions import ScatterPlot as sc
+from class_gather_data import DataHandler as dh
 #%matplotlib notebook
 
 #load file on poverty
