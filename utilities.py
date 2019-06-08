@@ -31,7 +31,7 @@ class Utilities:
         return df_piv
     
     @staticmethod
-    def trim(df1,df2,df3):
+    def trim(df1,df2,df3=None):
         '''
         Find intersection of dataframes based on indices and return trimmed dataframes
         Inputs: df1
@@ -48,12 +48,39 @@ class Utilities:
         '''
         assert (isinstance(df1,pd.DataFrame) or isinstance(df1,pd.Series))
         assert (isinstance(df2,pd.DataFrame) or isinstance(df2,pd.Series))
-        assert (isinstance(df3,pd.DataFrame) or isinstance(df3,pd.Series))
+        if df3 is None:
+            df3=df2
+        assert (isinstance(df3,pd.DataFrame) or isinstance(df3,pd.Series))    
         inx=df1.index & df2.index & df3.index
         df1_trim=df1.loc[inx]
         df2_trim=df2.loc[inx]
         df3_trim=df3.loc[inx]
+        
         return df1_trim,df2_trim,df3_trim
+     
+    def pipeline(df,year,name):
+        '''
+        Does series data formatting and filtering operations for the priority bar graph
+        Inputs: df
+                (pd.DataFrame)
+                The dataframe which contains data for the graph
+                
+                year
+                (integer)
+                Year to be used for the graph
+                
+                name
+                (str)
+                The new name of the column to be plotted
+        '''
+                
+        df_col=df[year].copy()
+        df_col.dropna(inplace=True)
+        df_col.sort_values(ascending=True,inplace=True)
+        df_col_df=df_col.to_frame()
+        df_col_df.rename(columns = {year: name},inplace=True)
+        
+        return df_col_df
          
          
          
