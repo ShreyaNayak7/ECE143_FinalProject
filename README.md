@@ -4,23 +4,29 @@ Please note that both this "README" file and the corresponding repository may no
 
 ## Members of Team 7
 
-Akhil Jain
-Shreya Nayak
-Jiaye Wang
+Akhil Jain (@ECEAkhil)
+
+Shreya Nayak (@ShreyaNayak7)
+
+Jiaye Wang (@AndyWang121)
 
 ## Descriptions of The Python Code in this Repository:
 
-1. [**continent_country_aap.py**](continent_country_map.py)
-
-[**continent_country_aap.py**](continent_country_map.py) is a Python script that contains a function for creating a ...
-
-2. [**gather_data.py**](./gather_data.py)
+1. [**gather_data.py**](./gather_data.py)
 
 **gather_data.py** should be made to have functions that can be used to store data in accessible formats for plotting purposes.
 
-3. [**plot_functions.py**](./plot_functions.py)
+2. [**plot_functions.py**](./plot_functions.py)
 
-[**plot_functions.py**](./plot_functions.py) is used to plot all of the scatter plots.
+For the final presentation, [**plot_functions.py**](./plot_functions.py) was used to plot all of the scatter plots. [**plot_func.py**](./plot_func.py) is an object-oriented version of [**plot_functions.py**](./plot_functions.py).
+
+3. [**utilities.py**](./utilities.py)
+
+[**utilities.py**](./utilities.py) is used for processing data so that a desired Pandas DataFrame can be obtained.
+
+4. [**continent_country_aap.py**](continent_country_map.py)
+
+[**continent_country_aap.py**](continent_country_map.py) is a Python script that contains a function for creating a Pandas DataFrame for mapping each country to a continent.
 
 ## Current and/or Recommended Direcories:
 
@@ -62,8 +68,17 @@ World Happiness Reports. https://www.kaggle.com/unsdsn/world-happiness or https:
 
 The World Bank. *GDP per capita (current US$)*. https://data.worldbank.org/indicator/ny.gdp.pcap.cd.
 
-## Third-Party Modules
+## Some of the Third-Party Modules Used
 
+1. Pandas
 1. Matplotlib
 1. Bokeh
 1. Folium
+
+## A Clarification
+
+A commit that says the following:
+
+    I inserted "@staticmethod".
+
+was not intended to have a link to the GitHub user who has a username of "staticmethod".
