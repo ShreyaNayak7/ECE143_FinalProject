@@ -1,6 +1,6 @@
-from gather_data import DataHandler as dh
-from utilities import Utilities as ut 
-from plot_functions import MultiBar as mb
+from class_gather_data import DataHandler as dh
+from class_utilities import Utilities as ut 
+from class_plot_functions import MultiBar as mb
 
 #load health expenditure data
 hl_raw=dh.gather_data_from_csv(r"D:\ECE 143\Data files for Project\UN data health exp.csv",index='Country or Area')
