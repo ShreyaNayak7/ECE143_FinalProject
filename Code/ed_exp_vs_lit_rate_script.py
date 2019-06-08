@@ -2,6 +2,7 @@ import pandas as pd
 from class_utilities import Utilities as ut
 from class_plot_functions import ScatterPlot as sc
 from class_gather_data import DataHandler as dh
+#%matplotlib notebook
 
 file_1="D:\ECE 143\Data files for Project\Education Expenditure.xls"
 file_2="D:\ECE 143\Data files for Project\EDULIT_DS_31052019025144633.csv"

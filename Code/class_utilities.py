@@ -49,14 +49,18 @@ class Utilities:
         assert (isinstance(df1,pd.DataFrame) or isinstance(df1,pd.Series))
         assert (isinstance(df2,pd.DataFrame) or isinstance(df2,pd.Series))
         if df3 is None:
-            df3=df2
-        assert (isinstance(df3,pd.DataFrame) or isinstance(df3,pd.Series))    
-        inx=df1.index & df2.index & df3.index
-        df1_trim=df1.loc[inx]
-        df2_trim=df2.loc[inx]
-        df3_trim=df3.loc[inx]
-        
-        return df1_trim,df2_trim,df3_trim
+            inx=df1.index & df2.index
+            df1_trim=df1.loc[inx]
+            df2_trim=df2.loc[inx]
+            return df1_trim,df2_trim
+            
+        else:
+            assert (isinstance(df3,pd.DataFrame) or isinstance(df3,pd.Series))  
+            inx=df1.index & df2.index & df3.index
+            df1_trim=df1.loc[inx]
+            df2_trim=df2.loc[inx]
+            df3_trim=df3.loc[inx]
+            return df1_trim,df2_trim,df3_trim
     
     @staticmethod
     def pipeline(df,year,name):

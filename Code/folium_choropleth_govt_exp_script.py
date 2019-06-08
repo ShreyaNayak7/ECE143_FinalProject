@@ -1,6 +1,7 @@
 import os
 from class_gather_data import DataHandler as dh
 from class_plot_functions import Choropleth as choro
+#%matplotlib inline
 
 #load json file that contains the map
 world_geo = os.path.join(r'C:\Users\shrey\A_Repository_for_the_Final_Project_for_ECE_143', 'countries.geo.json')
@@ -17,7 +18,8 @@ m = choro(location=[30,15],zoom_start=2.4,
           fill_color="YlGn")   
 
 mapp=m.make_map()
-m.add_marker(mapp,[([49.463803,6.18632],"Luxembourg $30.2k"),
+mapp=m.add_marker(mapp,[([49.463803,6.18632],"Luxembourg $30.2k"),
               ([41.850033,-87.6500523],"USA $10.45k"),
               ([35,104],"China $1.6k")])                          
 m.save(mapp,"my_plot.html")
+display(mapp)

@@ -18,7 +18,7 @@ year_ed=2013
 ed_col_df=ut.pipeline(ed_piv,year_ed,"Education Expenditure")
 
 #load social expenditure data
-soc_piv=dh.gather_data_from_Excel("D:/ECE 143/A_Repository_for_the_Final_Project_for_ECE_143/001_Main SPEED Dataset 2015.xls",
+soc_piv=dh.gather_data_from_Excel(r"001_Main SPEED Dataset 2015.xls",
                                  sh_name='totsp_ppp',index='country')
 year_soc=2010
 soc_col_df=ut.pipeline(soc_piv,year_soc,"Social Expenditure")
