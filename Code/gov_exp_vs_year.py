@@ -1,5 +1,5 @@
-from gather_data import DataHandler as dh
-from plot_functions import BokehLine as bl
+from class_gather_data import DataHandler as dh
+from class_plot_functions import BokehLine as bl
 
 #load_data
 file_1="D:\ECE 143\Data files for Project\Govt exp imf 2.xls"
